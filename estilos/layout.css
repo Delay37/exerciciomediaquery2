@@ -2,3 +2,34 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 0.1fr 0.8fr 0.1fr;
+    grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
+    gap: 6px;
+}
+body > *{
+    background-color: lightcyan;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+aside{
+    grid-area: aside;
+    background-color: plum;
+}
+main{
+    grid-area: main;
+    background-color: lightblue;
+}
+footer{
+    grid-area: footer;
+}
